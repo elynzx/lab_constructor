@@ -18,11 +18,7 @@ function Auto(
   this.placa = placa;
   this.tipoMotor = tipoMotor;
   this.motor = function () {
-    if (this.tipoMotor == "combustion") {
-      return "combustion";
-    } else {
-      return "electrico";
-    }
+    return this.tipoMotor === "combustion" ? "combustion" : "electrico"
   };
   this.generarFicha = function () {
     return `Auto: ${this.marca} ${this.modelo} (${this.anio}), Placa: ${this.placa}, Color: ${this.color}, ${this.puertas} puertas, ${this.kilometraje}km, Motor: ${this.motor()}`;
